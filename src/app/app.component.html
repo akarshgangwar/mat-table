@@ -1,3 +1,4 @@
+<h1>PWA-App</h1>
 <div class="search-bar">
 <mat-form-field appearance="standard">
   <!-- <mat-label>Search</mat-label> -->
@@ -20,10 +21,10 @@
   <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
-      Name
+      NameS
     </th> 
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
+  </ng-container> 
 
   <!-- Weight Column -->
   <ng-container matColumnDef="weight">
@@ -44,3 +45,9 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<h1>Demo API Data</h1>
+<div >
+  <ul>
+    <li *ngFor="let user of demoDataAPI.data">{{ user.first_name }}</li>
+  </ul>
+</div>
